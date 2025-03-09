@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NitroSMP</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
+    <style>
+        body {
+            background-image: url('https://art.pixilart.com/e342706146dbb3d.gif'); 
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            color: #008000;
+            text-align: center;
+        }
+        .tab-content {
+            display: none;
+        }
+        .active {
+            display: block;
+        }
+        nav {
+            margin: 20px 0;
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            margin: 5px;
+            font-size: 18px;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>NitroSMP</h1>
+        <p>Welcome to the offical NitroSMP website!</p>
+        
+        <!-- Navigation Tabs -->
+        <nav>
+            <button onclick="showTab('home')">Home</button>
+            <button onclick="showTab('news')">News</button>
+            <button onclick="showTab('gallery')">Gallery</button>
+        </nav>
+        
+        <!-- Home Section -->
+        <div id="home" class="tab-content active">
+            <h2>Home</h2>
+            <h3>Explore the best SMP experience.</h3>
+	    <p>Join the SMP today! Discord: https://discord.gg/MxNsMCCkZx</p>
+        </div>
+        
+        <!-- News Section -->
+        <div id="news" class="tab-content">
+            <h2>NitroSMP News</h2>
+            <div class="news-item">
+                <h3>Server verson updated from 1.16.5 to 1.17.1!</h3>
+                <p>Server is now joinable from 1.10-1.21.4, bedrock might be added later on in the seasons.</p>
+                <button>Read More</button>
+            </div>
+        </div>
+        
+        <!-- Gallery Section -->
+        <div id="gallery" class="tab-content">
+            <h2>NitroSMP Images</h2>
+            <div class="gallery-grid">
+                <img src="https://via.placeholder.com/200" alt="Minecraft Screenshot">
+                <img src="https://via.placeholder.com/200" alt="Minecraft Screenshot">
+                <img src="https://via.placeholder.com/200" alt="Minecraft Screenshot">
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        function showTab(tabId) {
+            document.querySelectorAll('.tab-content').forEach(tab => {
+                tab.classList.remove('active');
+            });
+            document.getElementById(tabId).classList.add('active');
+        }
+    </script>
+</body>
+</html>
